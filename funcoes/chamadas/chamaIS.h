@@ -1,11 +1,12 @@
-#ifndef CHAMAQUICK_H_INCLUDED
-#define CHAMAQUICK_H_INCLUDED
+#ifndef CHAMAIS_H_INCLUDED
+#define CHAMAIS_H_INCLUDED
+
 #include <vector>
 #include <fstream>
 #include <ctime>
-#include "../links.h"
+#include "../../links.h"
 
-void chamaQuick(int tamanho){
+void chamaIS(int tamanho){
     int number;
     vector<int> numbers;
     ifstream arquivo;
@@ -22,7 +23,7 @@ void chamaQuick(int tamanho){
         numbers.push_back(number);
     }
     arquivo.close();
-    quickSort(numbers, 0, (numbers.size()-1));
+    insertSort(numbers);
     fim = clock();
     tempo = double(fim - inicio)/CLOCKS_PER_SEC;
     cout<<"tempo de execucao: "<<tempo<<" s"<<endl;
@@ -37,7 +38,7 @@ void chamaQuick(int tamanho){
         numbers.push_back(number);
     }
     arquivo.close();
-    quickSort(numbers, 0, (numbers.size()-1));
+    insertSort(numbers);
     fim = clock();
     tempo = double(fim - inicio)/CLOCKS_PER_SEC;
     cout<<"tempo de execucao: "<<tempo<<" s"<<endl;
@@ -51,13 +52,12 @@ void chamaQuick(int tamanho){
     while (arquivo >> number) {
         numbers.push_back(number);
     }
-    printf("\n");
     arquivo.close();
-    quickSort(numbers, 0, (numbers.size()-1));
+    insertSort(numbers);
     fim = clock();
     tempo = double(fim - inicio)/CLOCKS_PER_SEC;
     cout<<"tempo de execucao: "<<tempo<<" s"<<endl;
     numbers.clear();
 }
 
-#endif // CHAMAQUICK_H_INCLUDED
+#endif // CHAMAIS_H_INCLUDED

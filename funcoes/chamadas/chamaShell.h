@@ -1,12 +1,12 @@
-#ifndef CHAMAIS_H_INCLUDED
-#define CHAMAIS_H_INCLUDED
+#ifndef CHAMASHELL_H_INCLUDED
+#define CHAMASHELL_H_INCLUDED
 
 #include <vector>
 #include <fstream>
 #include <ctime>
-#include "../links.h"
+#include "../../links.h"
 
-void chamaIS(int tamanho){
+void chamaShell(int tamanho){
     int number;
     vector<int> numbers;
     ifstream arquivo;
@@ -23,7 +23,7 @@ void chamaIS(int tamanho){
         numbers.push_back(number);
     }
     arquivo.close();
-    insertSort(numbers);
+    shellSort(numbers);
     fim = clock();
     tempo = double(fim - inicio)/CLOCKS_PER_SEC;
     cout<<"tempo de execucao: "<<tempo<<" s"<<endl;
@@ -38,7 +38,7 @@ void chamaIS(int tamanho){
         numbers.push_back(number);
     }
     arquivo.close();
-    insertSort(numbers);
+    shellSort(numbers);
     fim = clock();
     tempo = double(fim - inicio)/CLOCKS_PER_SEC;
     cout<<"tempo de execucao: "<<tempo<<" s"<<endl;
@@ -53,11 +53,11 @@ void chamaIS(int tamanho){
         numbers.push_back(number);
     }
     arquivo.close();
-    insertSort(numbers);
+    shellSort(numbers);
     fim = clock();
     tempo = double(fim - inicio)/CLOCKS_PER_SEC;
     cout<<"tempo de execucao: "<<tempo<<" s"<<endl;
     numbers.clear();
 }
 
-#endif // CHAMAIS_H_INCLUDED
+#endif // CHAMASHELL_H_INCLUDED

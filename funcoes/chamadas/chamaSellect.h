@@ -1,11 +1,11 @@
-#ifndef CHAMABB_H_INCLUDED
-#define CHAMABB_H_INCLUDED
+#ifndef CHAMASELLECT_H_INCLUDED
+#define CHAMASELLECT_H_INCLUDED
 #include <vector>
 #include <fstream>
 #include <ctime>
-#include "../links.h"
+#include "../../links.h"
 
-void chamaBB(int tamanho){
+void chamaSellect(int tamanho){
     int number;
     vector<int> numbers;
     ifstream arquivo;
@@ -22,7 +22,7 @@ void chamaBB(int tamanho){
         numbers.push_back(number);
     }
     arquivo.close();
-    bubleSort(numbers);
+    selectionSort(numbers);
     fim = clock();
     tempo = double(fim - inicio)/CLOCKS_PER_SEC;
     cout<<"tempo de execucao: "<<tempo<<" s"<<endl;
@@ -37,7 +37,7 @@ void chamaBB(int tamanho){
         numbers.push_back(number);
     }
     arquivo.close();
-    bubleSort(numbers);
+    selectionSort(numbers);
     fim = clock();
     tempo = double(fim - inicio)/CLOCKS_PER_SEC;
     cout<<"tempo de execucao: "<<tempo<<" s"<<endl;
@@ -52,11 +52,11 @@ void chamaBB(int tamanho){
         numbers.push_back(number);
     }
     arquivo.close();
-    bubleSort(numbers);
+    selectionSort(numbers);
     fim = clock();
     tempo = double(fim - inicio)/CLOCKS_PER_SEC;
     cout<<"tempo de execucao: "<<tempo<<" s"<<endl;
     numbers.clear();
 }
 
-#endif // CHAMABB_H_INCLUDED
+#endif // CHAMASELLECT_H_INCLUDED

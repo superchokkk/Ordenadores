@@ -3,7 +3,7 @@
 #include <vector>
 #include <fstream>
 #include <ctime>
-#include "../links.h"
+#include "../../links.h"
 
 void chamaQuick(int tamanho){
     int number;
@@ -51,7 +51,6 @@ void chamaQuick(int tamanho){
     while (arquivo >> number) {
         numbers.push_back(number);
     }
-    printf("\n");
     arquivo.close();
     quickSort(numbers, 0, (numbers.size()-1));
     fim = clock();

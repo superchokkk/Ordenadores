@@ -9,13 +9,14 @@
 #include"funcoes/selectionSort.h"
 #include"funcoes/shellSort.h"
 #include"funcoes/quickSort.h"
+#include"funcoes/mergeSort.h"
 //------------------------------------------------
-#include"funcoes/chamaBB.h"
-#include"funcoes/chamaIS.h"
-#include"funcoes/chamaSellect.h"
-#include"funcoes/chamaShell.h"
-#include"funcoes/chamaQuick.h"
-
+#include"funcoes/chamadas/chamaBB.h"
+#include"funcoes/chamadas/chamaIS.h"
+#include"funcoes/chamadas/chamaSellect.h"
+#include"funcoes/chamadas/chamaShell.h"
+#include"funcoes/chamadas/chamaQuick.h"
+#include"funcoes/chamadas/chamaMerge.h"
 //------------------------------------------------
 
 #endif // LINKS_H_INCLUDED

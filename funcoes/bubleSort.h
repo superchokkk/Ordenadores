@@ -20,11 +20,6 @@ void bubleSort(vector<int>& vet){
         if (!swapped)
             break;
     }
-
-    for(int aux=0; aux<n; aux++){
-        cout<<vet[aux]<<endl;
-    }
-
 }
 
 #endif // BUBLESORT_H_INCLUDED

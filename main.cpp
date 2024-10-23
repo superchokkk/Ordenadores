@@ -51,6 +51,29 @@ int main()
             cin>>respMenu;
             chamaQuick(respMenu);
             cout<<respMenu<<" feito :)"<<endl;
+            /*chamaQuick(500000);
+            cout<<respMenu<<" feito :)"<<endl;
+            chamaQuick(750000);
+            cout<<respMenu<<" feito :)"<<endl;
+            chamaQuick(1000000);
+            cout<<respMenu<<" feito :)"<<endl;
+            chamaQuick(5000000);
+            cout<<respMenu<<" feito :)"<<endl;*/
+            break;
+
+        case 6:
+            /*cout<<"tamanho: ";
+            cin>>respMenu;
+            chamaMerge(respMenu);
+            cout<<respMenu<<" feito :)"<<endl;*/
+            chamaQuick(500000);
+            cout<<respMenu<<" feito :)"<<endl;
+            chamaQuick(750000);
+            cout<<respMenu<<" feito :)"<<endl;
+            chamaQuick(1000000);
+            cout<<respMenu<<" feito :)"<<endl;
+            chamaQuick(5000000);
+            cout<<respMenu<<" feito :)"<<endl;
             break;
 
         case 9:

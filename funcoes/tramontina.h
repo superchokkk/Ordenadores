@@ -2,40 +2,18 @@
 #define TRAMONTINA_H_INCLUDED
 #include <vector>
 
-int tramontina(vector<int>& vet, int inicio, int fim){
-    int pivo, up, down;
-    pivo = inicio + (fim - inicio) / 2;
-    up   = fim;
-    down = inicio;
-    int aux = vet[pivo];
+int tramontina(vector<int>& vet, int down, int up) {
+    int pivo = vet[up];
+    int i = down - 1;
 
-    do{
-        while(vet[down]<vet[pivo]){
-            down++;
+    for (int j = down; j < up; j++) {
+        if (vet[j] < pivo) {
+            i++;
+            swap(vet[i], vet[j]);
         }
-        while(vet[up]>vet[pivo]){
-            up--;
-        }
-        if(up>down){
-
-            swap(vet[up], vet[down]);
-            for(int i=0; i<vet.size(); i++){
-                if(vet[i]==aux){
-                    pivo = i;
-                }
-            }
-        }
-    }while(up!=down);
-    cout<<"vetor tramontiado: "<<endl;
-    for(int i=0; i<vet.size(); i++){
-        cout<<vet[i]<<" | ";
     }
-    swap(vet[pivo],vet[up]);
-    for(int i=0; i< vet.size(); i++){
-        if(vet[i]==aux)
-            return i;
-    }
-    //return pivo;
+    swap(vet[i + 1], vet[up]);
+    return i + 1;
 }
 
 #endif // TRAMONTINA_H_INCLUDED

@@ -3,21 +3,13 @@
 #include <vector>
 #include "tramontina.h"
 
-void quickSort(vector<int>& vet, int inicio, int fim)
-{
-    if(inicio < fim){
-        //dividir
-        int pivo = tramontina(vet, inicio, fim);
+void quickSort(vector<int>& vet, int inicio, int fim) {
+    if (inicio < fim) {
 
-        if((fim-inicio)>2){
-            //recursiva esquerda
-            quickSort(vet, inicio, pivo--);
-            //recursiva direita
-            quickSort(vet, (pivo+1), fim);
-            return;
-        }
+        int pi = tramontina(vet, inicio, fim);
+        quickSort(vet, inicio, pi - 1);
+        quickSort(vet, pi + 1, fim);
     }
-    return;
 }
 
 #endif // QUICKSORT_H_INCLUDED

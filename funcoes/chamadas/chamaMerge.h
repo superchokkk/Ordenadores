@@ -1,12 +1,11 @@
-#ifndef CHAMASHELL_H_INCLUDED
-#define CHAMASHELL_H_INCLUDED
-
+#ifndef CHAMAMERGE_H_INCLUDED
+#define CHAMAMERGE_H_INCLUDED
 #include <vector>
 #include <fstream>
 #include <ctime>
-#include "../links.h"
+#include "../../links.h"
 
-void chamaShell(int tamanho){
+void chamaMerge(int tamanho){
     int number;
     vector<int> numbers;
     ifstream arquivo;
@@ -23,7 +22,7 @@ void chamaShell(int tamanho){
         numbers.push_back(number);
     }
     arquivo.close();
-    shellSort(numbers);
+    mergeSort(numbers, 0, (numbers.size()-1));
     fim = clock();
     tempo = double(fim - inicio)/CLOCKS_PER_SEC;
     cout<<"tempo de execucao: "<<tempo<<" s"<<endl;
@@ -38,7 +37,7 @@ void chamaShell(int tamanho){
         numbers.push_back(number);
     }
     arquivo.close();
-    shellSort(numbers);
+    mergeSort(numbers, 0, (numbers.size()-1));
     fim = clock();
     tempo = double(fim - inicio)/CLOCKS_PER_SEC;
     cout<<"tempo de execucao: "<<tempo<<" s"<<endl;
@@ -53,11 +52,12 @@ void chamaShell(int tamanho){
         numbers.push_back(number);
     }
     arquivo.close();
-    shellSort(numbers);
+    mergeSort(numbers, 0, (numbers.size()-1));
     fim = clock();
     tempo = double(fim - inicio)/CLOCKS_PER_SEC;
     cout<<"tempo de execucao: "<<tempo<<" s"<<endl;
     numbers.clear();
 }
 
-#endif // CHAMASHELL_H_INCLUDED
+
+#endif // CHAMAMERGE_H_INCLUDED
